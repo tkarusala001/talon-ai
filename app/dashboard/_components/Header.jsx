@@ -12,21 +12,21 @@ function Header() {
         console.log(path);
     },[])
   return (
-    <div className='flex p-4 items-center justify-between bg-secondary shadow-sm'>
+    <div className='flex p-1 items-center justify-between bg-secondary shadow-sm'>
         <Image src={'/logo.png'} width={130} height={100} alt='logo' />
         <ul className='hidden md:flex gap-6'>
             <li 
-            className={`hover:text-primary hover:font-bold transition cursor-pointer
+            className={`hover:text-purple-500 hover:font-bold transition cursor-pointer
             ${path=='/dashboard' && 'text-primary font-bold'}
             `}>
                 
                 Dashboard</li>
 
-            <li className={`hover:text-primary hover:font-bold transition cursor-pointer
+            <li className={`hover:text-purple-500 hover:font-bold transition cursor-pointer
             ${path=='/dashboard/questions' && 'text-primary font-bold'}
             `}>Questions</li>
 
-            <li className={`hover:text-primary hover:font-bold transition cursor-pointer
+            <li className={`hover:text-purple-500 hover:font-bold transition cursor-pointer
             ${path=='/dashboard/how' && 'text-primary font-bold'}
             `}>How It Works</li>
             
