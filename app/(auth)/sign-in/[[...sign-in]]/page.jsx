@@ -33,7 +33,7 @@ export default function Page() {
         </h2>
 
         <p className="mt-4 leading-relaxed text-white/90">
-        Talon AI is designed for coding and computer science professionals. Practice interviews with tailored questions based on your experience and job description, record your responses, and get detailed feedback with tips for improvement, along with a performance rating to sharpen your skills.
+        Talon AI is designed for anyone that is seeking employment. Practice interviews with tailored questions based on your experience and job description, record your responses, and get detailed feedback with tips for improvement, along with a performance rating to sharpen your skills.
         </p>
       </div>
     </section>

@@ -86,7 +86,7 @@ function AddNewInterview() {
             <h2>Add Details About Your Job Position/Role, Job Description, and Years of Experience</h2>
             <div className='mt-7 my-3'>
               <label>Job Position/Role</label>
-              <Input placeholder='Ex. Full Stack Developer' required
+              <Input placeholder='Ex. Software Engineer' required
               onChange={(event) =>setJobPosition(event.target.value)}/>
             </div>
             <div className='my-3'>
