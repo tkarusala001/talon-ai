@@ -4,6 +4,7 @@ import { db } from '@/utils/db'
 import { MockInterview } from '@/utils/schema'
 import { eq } from 'drizzle-orm'
 import { Lightbulb, WebcamIcon } from 'lucide-react'
+import Link from 'next/link'
 import React, { useEffect, useState} from 'react'
 import Webcam from 'react-webcam'
 
@@ -15,7 +16,7 @@ function Interview({params}) {
     useEffect(() => {
         getInterviewDetails();
         
-    }, )
+    },[] )
 
     const getInterviewDetails = async () => {
             const result = await db.select().from(MockInterview)
@@ -59,8 +60,11 @@ function Interview({params}) {
         </div>
 
         </div>
-        <div className='flex justify-end items-end'>     
-        <Button className='mt-2 text-white bg-gray-500 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700'>Start Interview</Button>
+        <div className='flex justify-end items-end'>
+            <Link href={'/dashboard/interview/'+params.interviewID+'/start'}>
+            <Button className='mt-2 text-white bg-gray-500 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700'>Start Interview</Button>
+            </Link>     
+        
         </div>  
 
      </div>
