@@ -1,4 +1,5 @@
 "use client"
+
 import Webcam from 'react-webcam'
 import React, {useEffect, useState} from 'react'
 import  Image  from 'next/image'
@@ -117,7 +118,7 @@ function RecordAnswerSection({mockInterviewQuestion, activeQuestionIndex, interv
                 )}
             </Button>
 
-          <Button className='bg-purple-400 flex gap-2 justify-center items-center' onClick={()=> console.log(userAnswer)}>Show User Answer</Button>
+          
           
 
     </div>
