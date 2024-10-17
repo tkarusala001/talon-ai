@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -42,8 +42,13 @@ function AddNewInterview() {
             const rawResponse = await result.response.text(); // Get raw response text
             console.log("Raw Response:", rawResponse);
 
-            // Clean the response from markdown formatting
-            const MockJsonResp = rawResponse.replace('```json', '').replace('```', '').replace(/\*/g, '');
+            // Clean the response from markdown formatting and any unwanted characters
+            const MockJsonResp = rawResponse
+                .replace(/```json/g, '')
+                .replace(/```/g, '')
+                .replace(/\*/g, '')
+                .trim(); // Remove leading and trailing whitespace
+
             console.log("Cleaned Response:", MockJsonResp);
 
             // Parse the JSON response and handle errors
@@ -106,7 +111,7 @@ function AddNewInterview() {
                                         />
                                     </div>
                                     <div className='my-3'>
-                                        <label>Job Description/Tech Stack (short)</label>
+                                        <label>Job Description(short)</label>
                                         <Textarea
                                             placeholder='Ex. Node.js, Angular.js, Python, PostgreSQL, etc.'
                                             required
