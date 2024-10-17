@@ -26,7 +26,7 @@ function StartInterview({ params }) {
             const jsonMockResp = JSON.parse(result[0].jsonMockResp); // Assuming this is a JSON string
             setMockInterviewQuestion(jsonMockResp);
         } else {
-            console.error('No interview data found for this ID.');
+            console.error('No interview data found for this ID!');
         }
     };
 
