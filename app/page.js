@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div>
-      {/* Other components or content */}
+      {/* Other components or content  */}
     </div>
   );
 }
